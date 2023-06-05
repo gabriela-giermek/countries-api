@@ -1,0 +1,48 @@
+// -----------------------------------------------------------------------------
+// Basic styles
+// -----------------------------------------------------------------------------
+
+body {
+  margin: 0;
+  font-family: $font-primary;
+  font-weight: 300;
+  line-height: 1;
+
+  * {
+    font-family: $font-primary;
+  }
+
+  &.light-mode {
+    color: $color-blue-very-dark;
+    background-color: $color-gray-light;
+  }
+
+  &.dark-mode {
+    color: $color-white;
+    background-color: $color-blue-dark;
+  }
+}
+
+a,
+button,
+.btn {
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: transparent;
+  }
+}
+
+img {
+  display: block;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

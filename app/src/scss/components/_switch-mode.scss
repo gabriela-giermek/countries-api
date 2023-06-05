@@ -1,0 +1,49 @@
+// -----------------------------------------------------------------------------
+// Switch mode button
+// -----------------------------------------------------------------------------
+
+.switch-mode {
+  text-align: right;
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 20px;
+  }
+  
+  &__text {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 600;
+
+    @include media-breakpoint-up(md) {
+      font-size: 18px;
+    }
+  }
+}
+
+body {
+  &.light-mode {
+    .switch-mode {
+      &__icon {
+        &-inner {
+          stroke: $color-blue-very-dark;
+        }
+      }
+    }
+  }
+
+  &.dark-mode {
+    .switch-mode {
+      &__icon {
+        &-inner {
+          stroke: $color-white;
+        }
+      }
+    }
+  }
+}

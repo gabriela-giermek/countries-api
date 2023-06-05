@@ -1,0 +1,45 @@
+// -----------------------------------------------------------------------------
+// Mixins.
+// -----------------------------------------------------------------------------
+
+// Breakpoints
+@mixin media-breakpoint-up($size) {
+  @if $size == xs {
+    @media (min-width: 376px) {
+      @content;
+    }
+  } @else if $size == sm {
+    @media (min-width: 576px) {
+      @content;
+    }
+  } @else if $size == md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media (min-width: 990px) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  } @else if $size == xxl {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  } @else if $size == fhd {
+    @media (min-width: 1920px) {
+      @content;
+    }
+  }
+}
+
+// Placeholder
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}

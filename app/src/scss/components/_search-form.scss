@@ -1,0 +1,88 @@
+// -----------------------------------------------------------------------------
+// Search form
+// -----------------------------------------------------------------------------
+
+.search-form {
+  border-radius: 6px;
+  box-shadow: 0 0 20px 0 rgba($color-black, 0.1);
+  overflow: hidden;
+
+  @include media-breakpoint-up(lg) {
+    max-width: 480px;
+  }
+
+  &__icon {
+    width: 20px;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+
+    @include media-breakpoint-up(lg) {
+      left: 32px;
+    }
+
+    &-inner {
+      fill: $color-gray-dark;
+    }
+  }
+
+  &__input {
+    height: 50px;
+    padding: 10px 15px 10px 50px;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+
+    @include input-placeholder {
+      font-weight: 300;
+      color: $color-gray-dark;
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: 56px;
+      padding-left: 75px;
+    }
+  }
+}
+
+body {
+  &.light-mode {
+    .search-form {
+      &__icon {
+        &-inner {
+          fill: $color-gray-dark;
+        }
+      }
+
+      &__input {
+        background-color: $color-white;
+
+        @include input-placeholder {
+          font-weight: 300;
+          color: $color-gray-dark;
+        }
+      }
+    }
+  }
+
+  &.dark-mode {
+    .search-form {
+      &__icon {
+        &-inner {
+          fill: $color-white;
+        }
+      }
+
+      &__input {
+        color: $color-white;;
+        background-color: $color-blue;
+  
+        @include input-placeholder {
+          font-weight: 300;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>REST Countries API - Home</title>
+  <link rel="stylesheet" href="dist/css/style.css">
+</head>
+<body>
+  <header class="header w-100 position-fixed">
+    <div class="container h-100">
+      <div class="header__inner row h-100">
+        <div class="header__title col">Where in the world?</div>
+
+        <div class="header__switch col">
+          <div class="switch-mode text-right">
+            <div class="switch-mode__btn">
+              <svg class="switch-mode__icon" viewBox="0 0 448 448" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;">
+                <g transform="matrix(1,0,0,1,-32,-32)">
+                  <path class="switch-mode__icon-inner" d="M160,136C160,105.38 164.51,74.39 176,48C99.57,81.27 48,159.32 48,248C48,367.29 144.71,464 264,464C352.68,464 430.73,412.43 464,336C437.61,347.49 406.62,352 376,352C256.71,352 160,255.29 160,136Z" style="fill:none;fill-rule:nonzero;stroke-width:32px;"/>
+                </g>
+              </svg>
+  
+              <div class="switch-mode__text">Dark mode</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="actions">
+      <div class="container">
+        <div class="row">
+          <div class="actions__search col">
+            <div class="search-form position-relative w-100">
+              <svg class="search-form__icon position-absolute" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                <path class="search-form__icon-inner" d="M12.5,11L11.7,11L11.4,10.7C12.4,9.6 13,8.1 13,6.5C13,2.9 10.1,0 6.5,0C2.9,0 0,2.9 0,6.5C0,10.1 2.9,13 6.5,13C8.1,13 9.6,12.4 10.7,11.4L11,11.7L11,12.5L16,17.5L17.5,16L12.5,11ZM6.5,11C4,11 2,9 2,6.5C2,4 4,2 6.5,2C9,2 11,4 11,6.5C11,9 9,11 6.5,11Z"/>
+              </svg>
+
+              <input type="text" id="searchQuery" class="search-form__input w-100" placeholder="Search for a country...">
+            </div>
+          </div>
+  
+          <div class="actions__filter col">
+            <div class="filter position-relative">
+              <div id="filterBtn" class="filter__btn position-relative">Filter by region</div>
+              
+              <div id="filterList" class="filter__list position-absolute" data-toggle="collapsed">
+                <div class="filter__list-item">All</div>
+                <div class="filter__list-item">Africa</div>
+                <div class="filter__list-item">Americas</div>
+                <div class="filter__list-item">Asia</div>
+                <div class="filter__list-item">Europe</div>
+                <div class="filter__list-item">Oceania</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="countries">
+      <div class="container">
+        <div id="countryList" class="countries__list row"></div>
+      </div>
+    </div>
+  </main>
+  
+  <script type="module" src="dist/js/main.js"></script>
+</body>
+</html>

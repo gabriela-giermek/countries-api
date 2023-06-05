@@ -1,0 +1,45 @@
+// -----------------------------------------------------------------------------
+// Country list
+// -----------------------------------------------------------------------------
+
+.countries {
+  margin-top: 35px;
+  margin-bottom: 50px;
+
+  @include media-breakpoint-up(sm) {
+    margin-top: 50px;
+  }
+
+  &__list {
+    @include media-breakpoint-up(xxl) {
+      margin-right: -30px;
+      margin-left: -30px;
+    }
+
+    &-item {
+      margin-bottom: 30px;
+
+      @include media-breakpoint-up(sm) {
+        width: 50%;
+      }
+
+      @include media-breakpoint-up(md) {
+        width: 33.33333333%;
+      }
+
+      @include media-breakpoint-up(xl) {
+        width: 25%;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        margin-bottom: 70px;
+        padding-right: 30px;
+        padding-left: 30px;
+      }
+
+      @include media-breakpoint-up(fhd) {
+        width: 20%;
+      }
+    }
+  }
+}

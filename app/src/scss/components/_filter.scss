@@ -1,0 +1,108 @@
+// -----------------------------------------------------------------------------
+// Filter
+// -----------------------------------------------------------------------------
+
+.filter {
+  z-index: 1;
+  
+  &__btn,
+  &__list {
+    width: 200px;
+    border-radius: 6px;
+    box-shadow: 0 0 20px 0 rgba($color-black, 0.1);
+    overflow: hidden;
+  }
+
+  &__btn {
+    height: 50px;
+    padding: 0 25px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 50px;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      top: 22px;
+      right: 27px;
+      border-width: 1px;
+      border-style: solid;
+      border-top: none;
+      border-left: none;
+      position: absolute;
+      transform: rotate(45deg);
+    }
+
+    @include media-breakpoint-up(sm) {
+      margin-left: auto;
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: 56px;
+      line-height: 56px;
+    }
+  }
+
+  &__list {
+    top: 54px;
+    left: 0;
+    margin-top: 5px;
+    padding: 10px 25px;
+    display: none;
+
+    @include media-breakpoint-up(sm) {
+      right: 0;
+      left: auto;
+    }
+
+    @include media-breakpoint-up(lg) {
+      top: 60px;
+    }
+
+    &-item {
+      margin-bottom: 5px;
+      padding: 10px 0;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+body {
+  &.light-mode {
+    .filter {
+      &__btn,
+      &__list {
+        background-color: $color-white;
+      }
+
+      &__btn {
+        &::before {
+          border-color: $color-blue-very-dark;
+        }
+      }
+    }
+  }
+
+  &.dark-mode {
+    .filter {
+      &__btn,
+      &__list {
+        background-color: $color-blue;
+      }
+
+      &__btn {
+        &::before {
+          border-color: $color-white;
+        }
+      }
+    }
+  }
+}

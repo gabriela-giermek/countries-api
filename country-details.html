@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>REST Countries API - Country details</title>
+  <link rel="stylesheet" href="dist/css/style.css">
+</head>
+<body>
+  <header class="header w-100 position-fixed">
+    <div class="container h-100">
+      <div class="header__inner row h-100">
+        <div class="header__title col">Where in the world?</div>
+
+        <div class="header__switch col">
+          <div class="switch-mode text-right">
+            <div class="switch-mode__btn">
+              <svg class="switch-mode__icon" viewBox="0 0 448 448" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;">
+                <g transform="matrix(1,0,0,1,-32,-32)">
+                  <path class="switch-mode__icon-inner" d="M160,136C160,105.38 164.51,74.39 176,48C99.57,81.27 48,159.32 48,248C48,367.29 144.71,464 264,464C352.68,464 430.73,412.43 464,336C437.61,347.49 406.62,352 376,352C256.71,352 160,255.29 160,136Z" style="fill:none;fill-rule:nonzero;stroke-width:32px;"/>
+                </g>
+              </svg>
+  
+              <div class="switch-mode__text" >Dark mode</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="actions">
+      <div class="container">
+        <a href="/" class="actions__return btn btn--primary"><span class="actions__return-icon position-relative"></span>Back</a>
+      </div>
+    </div>
+
+    <div class="country-details">
+      <div class="container">
+        <div class="country-details__content row">
+          <div class="country-details__flag col">
+            <img class="country-flag country-details__flag-img img-fluid w-100">
+          </div>
+
+          <div class="country-details__info col">
+            <h1 class="country-name country-details__info-name"></h1>
+
+            <ul class="country-details__info-list">
+              <li class="country-details__info-item d-flex">
+                <span class="country-details__info-label">Native Name:</span>
+                <span class="country-native-name country-details__info-value"></span>
+              </li>
+              <li class="country-details__info-item d-flex">
+                <span class="country-details__info-label">Population:</span>
+                <span class="country-population country-details__info-value"></span>
+              </li>
+              <li class="country-details__info-item d-flex">
+                <span class="country-details__info-label">Region:</span>
+                <span class="country-region country-details__info-value"></span>
+              </li>
+              <li class="country-details__info-item d-flex">
+                <span class="country-details__info-label">Sub region:</span>
+                <span class="country-subregion country-details__info-value"></span>
+              </li>
+              <li class="country-details__info-item d-flex">
+                <span class="country-details__info-label">Capital:</span>
+                <span class="country-capital country-details__info-value"></span>
+              </li>
+              <li class="country-details__info-item d-flex">
+                <span class="country-details__info-label">Top Level Domain:</span>
+                <span class="country-domain country-details__info-value"></span>
+              </li>
+              <li class="country-details__info-item d-flex">
+                <span class="country-details__info-label">Currencies:</span>
+                <span class="country-currency country-details__info-value"></span>
+              </li>
+              <li class="country-details__info-item d-flex">
+                <span class="country-details__info-label">Languages:</span>
+                <span class="country-lang country-details__info-value"></span>
+              </li>
+            </ul>
+
+            <div class="country-borders d-none">
+              <div class="country-details__borders">
+                <span class="country-details__borders-label">Border Countries:</span>
+    
+                <div class="country-borders-list country-details__borders-list"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <script type="module" src="dist/js/main.js"></script>
+</body>
+</html>
